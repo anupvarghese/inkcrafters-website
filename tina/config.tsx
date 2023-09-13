@@ -5,20 +5,46 @@ import { heroBlockSchema } from "../components/blocks/hero";
 import { testimonialBlockSchema } from "../components/blocks/testimonial";
 import { ColorPickerInput } from "./fields/color";
 import { iconSchema } from "../components/util/icon";
+import { getSession, signIn, signOut } from "next-auth/react";
+
+const isLocal = process.env.TINA_PUBLIC_IS_LOCAL === "true";
 
 const config = defineConfig({
   contentApiUrlOverride: "/api/gql",
   admin: {
     auth: {
-      useLocalAuth: true,
+      useLocalAuth: isLocal,
+      customAuth: !isLocal,
+      authenticate: async () => {
+        if (isLocal) {
+          return true;
+        }
+        return signIn("Credentials", { callbackUrl: "/admin/index.html" });
+      },
+      getToken: async () => {
+        return { id_token: "" };
+      },
+      getUser: async () => {
+        if (isLocal) {
+          return true;
+        }
+        const session = await getSession();
+        return !!session;
+      },
+      logout: async () => {
+        if (isLocal) {
+          return;
+        }
+        return signOut({ callbackUrl: "/admin/index.html" });
+      },
     },
   },
-  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID!,
+  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
   branch:
-    process.env.NEXT_PUBLIC_TINA_BRANCH! || // custom branch env override
-    process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF! || // Vercel branch env
-    process.env.HEAD!, // Netlify branch env
-  token: process.env.TINA_TOKEN!,
+    process.env.NEXT_PUBLIC_TINA_BRANCH || // custom branch env override
+    process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF || // Vercel branch env
+    process.env.HEAD, // Netlify branch env
+  token: process.env.TINA_TOKEN,
   media: {
     // If you wanted cloudinary do this
     // loadCustomStore: async () => {

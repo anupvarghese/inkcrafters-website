@@ -3,7 +3,7 @@ title: Tina Cloud Starter
 blocks:
   - headline: Welcome to the Ink Crafters
     text: |
-      For all your printing needs
+      For all your printing needs!
     actions:
       - label: Get Started
         type: button

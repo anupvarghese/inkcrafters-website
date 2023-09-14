@@ -26,7 +26,7 @@ blocks:
           color: red
           style: float
         title: Business Cards
-        text: Business car printing
+        text: Business card printing
       - icon:
           name: BiBookOpen
           color: primary

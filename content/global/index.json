@@ -1,11 +1,11 @@
 {
   "header": {
     "icon": {
-      "name": "Tina",
-      "color": "orange",
+      "name": "BiColor",
+      "color": "yellow",
       "style": "float"
     },
-    "name": "Tina Starter",
+    "name": "Ink Crafters",
     "color": "default",
     "nav": [
       {

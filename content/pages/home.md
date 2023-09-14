@@ -43,7 +43,7 @@ blocks:
     _template: features
   - quote: Satisfaction guaranteed... Definitely
     author: George Thekkumootil
-    color: primary
+    color: tint
     _template: testimonial
 ---
 

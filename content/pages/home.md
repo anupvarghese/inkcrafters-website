@@ -1,13 +1,9 @@
 ---
 title: Tina Cloud Starter
 blocks:
-  - headline: Welcome to the Tina Starter
-    text: >
-      This project is set up to show you the basics of working with Tina. You're
-      looking at the landing page, which pulls content from
-      `content/pages/home.md`, components from components/blocks, and puts them
-      all together in `pages/[filename].tsx`, all based on a config
-      `tina/config.tsx`.
+  - headline: Welcome to the Ink Crafters
+    text: |
+      For all your printing needs
     actions:
       - label: Get Started
         type: button
@@ -26,36 +22,31 @@ blocks:
     _template: hero
   - items:
       - icon:
-          name: BiCodeBlock
+          name: BiCreditCardFront
           color: red
           style: float
-        title: Amazing Feature
-        text: >-
-          Aliquam blandit felis rhoncus, eleifend ipsum in, condimentum nibh.
-          Praesent ac faucibus risus, eu lacinia enim.
+        title: Business Cards
+        text: Business car printing
       - icon:
-          name: BiLike
+          name: BiBookOpen
           color: primary
           style: float
-        title: This Is a Feature
-        text: Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.
+        title: Pamphlets
+        text: Pamphlet printing
       - icon:
-          name: BiPalette
+          name: BiBookHeart
           color: green
           style: float
-        title: Configurable Theme
-        text: >-
-          Edit global theme configuration with Tina. Change your theme's primary
-          color, font, or icon set.
+        title: Books
+        text: Book printing
     color: tint
     _template: features
-  - quote: >-
-      There are only two hard things in Computer Science: cache invalidation and
-      naming things.
-    author: Phil Karlton
+  - quote: Satisfaction guaranteed... Definitely
+    author: George Thekkumootil
     color: primary
     _template: testimonial
 ---
+
 
 
 

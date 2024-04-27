@@ -1,0 +1,48 @@
+---
+import * as AstroFeather from "astro-feather";
+---
+
+<nav
+    class="flex-wrap lg:flex items-center justify-between mb-20 lg:mb-20"
+    x-data="{navbarOpen:false}"
+>
+    <div class="flex items-center justify-between mb-10 lg:mb-0">
+        <img src="assets/image/inkcrafters-logo.svg" alt="Logo" />
+
+        <button
+            class="flex items-center justify-center border border-orange-500 w-10 h-10 text-orange-500 rounded-md outline-none lg:hidden ml-auto"
+            @click="navbarOpen = !navbarOpen"
+        >
+            <AstroFeather.MenuIcon />
+        </button>
+    </div>
+
+    <ul
+        class="hidden lg:flex flex-col lg:flex-row lg:items-center lg:space-x-20"
+        :class="{'hidden':!navbarOpen,'flex':navbarOpen}"
+    >
+        <li
+            class="font-medium text-orange-500 text-lg hover:text-orange-300 transition ease-in-out duration-300 mb-5 lg:mb-0"
+        >
+            <a href="#">Services</a>
+        </li>
+
+        <li
+            class="font-medium text-orange-500 text-lg hover:text-orange-300 transition ease-in-out duration-300 mb-5 lg:mb-0"
+        >
+            <a href="#">Works</a>
+        </li>
+
+        <li
+            class="font-medium text-orange-500 text-lg hover:text-orange-300 transition ease-in-out duration-300 mb-5 lg:mb-0"
+        >
+            <a href="#">Blog</a>
+        </li>
+
+        <li
+            class="px-8 py-3 font-medium text-orange-500 text-lg text-center border-2 border-orange-500 rounded-md hover:bg-orange-500 hover:text-white transition ease-linear duration-300"
+        >
+            <a href="#">Connect</a>
+        </li>
+    </ul>
+</nav>

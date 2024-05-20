@@ -1,205 +1,27 @@
 ---
 import Layout from "../layouts/home.astro";
-import * as AstroFeather from "astro-feather";
-import Nav from "../components/navbar.astro";
-import Feature from "../components/feature.astro";
-import Showcase from "../components/showcase.astro";
-import Capability from "../components/capability.astro";
-import Hero from "../components/hero.astro";
 ---
+<style>
+    /* Define custom animations */
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.1);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+</style>
 
 <Layout title="Inkcrafters">
-    <!-- home section -->
-    <section class="py-8 md:py-8">
-        <div class="container max-w-screen-xl mx-auto px-4">
-            <Nav />
-            <Hero />
-        </div>
-        <!-- container.// -->
-    </section>
-    <!-- home section //end -->
-
-    <!-- feature section -->
-    <section class="py-5">
-        <div class="container max-w-screen-xl mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-                <Feature
-                    title="Brochures & Catalogues"
-                    description="Showcase your products or services in style with beautifully printed brochures and catalogues."
-                />
-
-                <Feature
-                    title="Labels"
-                    description="Choose from a variety of shapes, sizes, and finishes to suit your needs and make your brand stand out."
-                />
-
-                <Feature
-                    title="Business Cards"
-                    description="Make a lasting impression with professionally designed and printed business cards that reflect your brand."
-                />
-
-                <Feature
-                    title="Coasters & Banners"
-                    description="Personalised coasters are great for promoting your brand in restaurants or pubs."
-                />
-
-                <Feature
-                    title="Signage"
-                    description="Stand out from the crowd with custom signage perfect for advertising, events, or decorations."
-                />
-
-                <Feature
-                    title="Stationery"
-                    description=" Elevate your correspondence with personalized stationery, including letterheads, envelopes, t-shirts and notepads."
-                />
-            </div>
-        </div>
-        <!-- container.// -->
-    </section>
-    <!-- feature section //end -->
-
-    <section class="py-5">
-        <div class="container max-w-screen-xl mx-auto px-4">
-            <h1
-                class="font-semibold text-gray-700 text-3xl md:text-4xl text-center py-5"
-            >
-                What we do?
-            </h1>
-
-            <div
-                class="flex flex-col md:flex-row items-center justify-between py-5"
-            >
-                <Capability
-                    title="Quality Printing"
-                    description="From vibrant and eye-catching labels that make your products stand out on the shelves to sleek and professional brochures that effectively showcase your services, we take pride in our ability to bring your vision to life. With state-of-the-art equipment and a commitment to quality, we guarantee crisp, clear, and consistent printing on every project."
-                    image="assets/image/image-1.svg"
-                />
-            </div>
-
-            <div
-                class="flex flex-col md:flex-row-reverse items-center justify-between py-5"
-            >
-                <Capability
-                    title="Reliable Delivery"
-                    description="At Inkcrafters, we believe in making your printing experience as seamless and convenient as possible. That's why we're pleased to offer free delivery for all orders above $100! Sit back, relax and let us take care of the rest."
-                    image="assets/image/image-2.svg"
-                />
-            </div>
-
-            <div
-                class="flex flex-col md:flex-row items-center justify-between py-5"
-            >
-                <Capability
-                    title="Friendly and prompt support"
-                    description="Have a question about your order? Need assistance with file preparation or design advice? Our dedicated support team is here to help every step of the way. With a smile and a commitment to excellence, we're ready to address your concerns and ensure a smooth printing experience."
-                    image="assets/image/image-3.svg"
-                />
-            </div>
-        </div>
-        <!-- container.// -->
-    </section>
-
-    <section class="py-5">
-        <div class="container max-w-screen-xl mx-auto px-4">
-            <h1
-                class="font-semibold text-gray-700 text-3xl md:text-4xl text-center"
-            >
-                Our works
-            </h1>
-
-            <p
-                class="font-normal text-gray-500 text-md md:text-lg text-center pb-5"
-            >
-                Browse through our gallery to see how we've helped businesses
-                like yours <br /> make a lasting impression with our printing expertise.
-            </p>
-
-            <div
-                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 xl:gap-10"
-            >
-                <Showcase
-                    title="Brochures & Catalogues"
-                    image="assets/image/yoga-1.svg"
-                />
-
-                <Showcase title="Labels" image="assets/image/yoga-2.svg" />
-
-                <Showcase
-                    title="Business Cards"
-                    image="assets/image/yoga-3.svg"
-                />
-
-                <Showcase
-                    title="Coasters & Banners"
-                    image="assets/image/yoga-1.svg"
-                />
-
-                <Showcase title="Signage" image="assets/image/yoga-2.svg" />
-
-                <Showcase title="Stationery" image="assets/image/yoga-3.svg" />
-            </div>
-
-            <div class="flex justify-center mb-20 pt-10">
-                <a
-                    href="#"
-                    class="px-6 py-2 md:px-8 md:py-3 flex items-center gap-3 font-medium text-orange-500 text-lg border-2 border-orange-500 rounded-md hover:bg-orange-500 hover:text-white transition ease-linear duration-300"
-                >
-                    And many more
-                    <AstroFeather.CornerRightUpIcon />
-                </a>
-            </div>
-
-            <div
-                class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 ml-4 md:ml-20 xl:ml-0 mb-20 xl:mb-40"
-            >
-                <img
-                    src="assets/image/brand-1.svg"
-                    alt="Image"
-                    class="mb-5 md:mb-10 xl:mb-0"
-                />
-
-                <img
-                    src="assets/image/brand-2.svg"
-                    alt="Image"
-                    class="mb-5 md:mb-0"
-                />
-
-                <img
-                    src="assets/image/brand-3.svg"
-                    alt="Image"
-                    class="mb-5 md:mb-10 xl:mb-0"
-                />
-
-                <img
-                    src="assets/image/brand-4.svg"
-                    alt="Image"
-                    class="mb-5 md:mb-0"
-                />
-            </div>
-
-            <div class="flex flex-wrap md:flex-nowrap justify-between mb-8">
-                <div>
-                    <p
-                        class="font-normal text-gray-500 text-md md:text-lg uppercase mb-3"
-                    >
-                        Let's talk
-                    </p>
-
-                    <h1 class="font-bold text-gray-700 text-xl md:text-4xl">
-                        Do you have any Project?
-                    </h1>
-                </div>
-
-                <div class="mt-10">
-                    <a
-                        href="#"
-                        class="px-4 py-2 md:px-8 md:py-3 font-medium text-orange-500 text-lg border-2 border-orange-500 rounded-md hover:bg-orange-500 hover:text-white transition ease-linear duration-300"
-                    >
-                        Contact us now
-                    </a>
-                </div>
-            </div>
-        </div>
-        <!-- container.// -->
-    </section>
+  <div class="flex justify-center items-center h-screen">
+    <div class="text-center">
+      <p class="text-8xl text-yellow-500 animate-pulse">🚧</p>
+        <p class="text-4xl mt-4 text-gray-800">We apologize for the inconvenience</p>
+        <p class="text-2xl mt-2 text-gray-600">Our business is currently not operational!</p>
+    </div>
+  </div>
 </Layout>
